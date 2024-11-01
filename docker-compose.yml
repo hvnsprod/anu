@@ -9,11 +9,11 @@ services:
       - ./data/accounts.txt:/grass/data/accounts.txt
       - ./data/proxies.txt:/grass/data/proxies.txt
     ports:
-      - 8080:80
+      - 8082:80
     environment:
       - MIN_PROXY_SCORE=50
       - CLAIM_REWARDS_ONLY=False                # claim tiers rewards only (https://app.getgrass.io/dashboard/referral-program)
-      - REGISTER_ACCOUNT_ONLY=True
+      - REGISTER_ACCOUNT_ONLY=False
       - REGISTER_DELAY="(3, 7)"
       - THREADS=2                               # for register account / claim rewards mode only
       - CHECK_POINTS=True                       # show point for each account every nearly 10 minutes
